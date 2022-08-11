@@ -5,8 +5,11 @@ import {
   Card,
   CardContent,
   Button,
+  Chip,
+  Stack,
 } from '@mui/material';
 import ClearIcon from '@mui/icons-material/Clear';
+import EditIcon from '@mui/icons-material/Edit';
 import Image from './image';
 import TypographyLimited from './typography-limited';
 
@@ -17,47 +20,103 @@ const ProductCard = ({
   category,
   price,
   onDelete,
+  onEdit,
 }) => (
   <Card sx={{
-    display: 'flex', flexDirection: 'column', height: '100%', position: 'relative', p: 3,
+    display: 'flex', flexDirection: 'column', height: '100%', position: 'relative', border: 'none', boxShadow: 'none',
   }}
   >
     <Box sx={{ position: 'relative', width: '100%', pt: '95%' }}>
       <Image src={img} sx={{ position: 'absolute', top: 0, left: 0 }} />
     </Box>
+    <Stack direction="row" paddingLeft="10px">
+      <Chip
+        label={`# ${category}`}
+        sx={{
+          backgroundColor: '#f0e78c',
+          fontSize: 10,
+          mt: 2,
+          mb: 2,
+          mr: 0.5,
+        }}
+      />
+      <Chip
+        label="#style"
+        sx={{
+          backgroundColor: '#f0e78c',
+          fontSize: 10,
+          mt: 2,
+          mb: 2,
+          mr: 0.5,
+        }}
+      />
+      <Chip
+        label="#fashion"
+        sx={{
+          backgroundColor: '#f0e78c',
+          fontSize: 10,
+          mt: 2,
+          mb: 2,
+        }}
+      />
+
+    </Stack>
 
     <CardContent sx={{ p: 2, flexGrow: 1 }}>
-
-      <Typography variant="subtitle" component="div" sx={{ mb: 2 }}>{category}</Typography>
       <Box sx={{
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
+        pb: 2,
       }}
       >
-        <Typography variant="h5" component="div">{title}</Typography>
-        <Typography variant="h6" component="div" color="primary.main">{`${price} €`}</Typography>
+        <Typography
+          variant="h5"
+          component="div"
+        >
+          {title}
+        </Typography>
+        <Typography variant="h5" component="div" color="black">{`${price} €`}</Typography>
       </Box>
       <TypographyLimited variant="body2" color="text.secondary">{description}</TypographyLimited>
     </CardContent>
-    <Button
-      sx={{
-        border: 1,
-        color: 'white',
-        bgcolor: 'error.main',
-        display: 'flex',
-        alignSelf: 'center',
-        minWidth: 170,
-        p: 0.8,
-        '&:hover': {
-          bgcolor: '#d32f2fbf',
-        },
-      }}
-      size="small"
-      onClick={onDelete}
-    >
-      <ClearIcon />
-    </Button>
+    <Box sx={{ display: 'flex', pb: 2, pl: 2 }}>
+      <Button
+        sx={{
+          color: '#2f4f4e',
+          fontWeight: 900,
+          fontSize: 34,
+          '&:hover': {
+            bgcolor: 'warning.light',
+          },
+        }}
+        size="small"
+        onClick={onDelete}
+      >
+        <ClearIcon sx={{
+          fontSize: 28,
+        }}
+        />
+      </Button>
+      <Button
+        sx={{
+          color: '#2f4f4e',
+          fontWeight: 900,
+          '&:hover': {
+            bgcolor: 'primary.light',
+          },
+        }}
+        size="small"
+        onClick={onEdit}
+      >
+        <EditIcon
+          sx={{
+            fontSize: 28,
+          }}
+        />
+      </Button>
+    </Box>
+
   </Card>
 );
 

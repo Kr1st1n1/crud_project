@@ -5,7 +5,6 @@ const Image = styled('img')({
   objectPosition: 'center',
   height: '100%',
   width: '100%',
-  padding: 40,
 });
 
 export default Image;

@@ -1,35 +1,35 @@
 {
   "products": [
     {
-      "id": "1A20FE5B-2A77-FE36-D4B3-E09F860688E3",
-      "title": "in faucibus",
-      "description": "odio tristique pharetra. Quisque ac libero nec ligula consectetuer",
-      "categoryId": 1,
-      "img": "/dogfoodtwo.jpg",
-      "price": 60.29
+      "id": "A3ADE977-67F9-7D43-DC1E-DA5F81202699",
+      "title": "ornare placerat,",
+      "description": "nascetur ridiculus mus. Odio tristique pharetra",
+      "categoryId": 2,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT-UluJXxod98WgR6filICQjf3OKhrW7RKpsWyDBg8JZIZADd7jUHcqHMMxPQnTVga6XU&usqp=CAU",
+      "price": 70.59
     },
     {
       "id": "593CAD15-581D-514A-3956-565A5671272B",
       "title": "non quam.",
       "description": "vitae, sodales at, velit. Pellentesque ultricies",
-      "categoryId": 1,
-      "img": "/dogfoodthree.jpg",
+      "categoryId": 2,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSSYxdYiuy-Vam8htV2LCsvlPD4YtE7ZTAyA&usqp=CAU",
       "price": 20.55
     },
     {
       "id": "DCE10D7D-3987-EE3E-6E17-75FC38D23ECA",
       "title": "adipiscing elit.",
       "description": "vel est tempor bibendum. Donec felis orci, adipiscing non, luctus",
-      "categoryId": 2,
-      "img": "/dogtoytwo.jpg",
-      "price": 20.63
+      "categoryId": 3,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTiqnHyGl5U7GmOZpnxIxCx0T92BTGCfuWtg&usqp=CAU",
+      "price": 20.063
     },
     {
       "id": "438A43D5-A392-8B54-32BA-458A46292172",
       "title": "Duis gravida.",
       "description": "eget magna. Suspendisse tristique neque",
-      "categoryId": 2,
-      "img": "/dogtoythree.jpg",
+      "categoryId": 5,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhux24QSaZj-YsE38OFjVvHDIRPb0lSCnB3g&usqp=CAU",
       "price": 18.99
     },
     {
@@ -37,31 +37,31 @@
       "title": "faucibus orci",
       "description": "sem ut dolor dapibus gravida. Aliquam",
       "categoryId": 1,
-      "img": "/foodone.jpg",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtjQIhMMVKlX9CuZ78u1qE2VzfDPiBXxe1Cw&usqp=CAU",
       "price": 22.22
     },
     {
       "id": "13A3DD4D-460D-C87C-A4F4-56B21C35E815",
       "title": "Ut semper",
       "description": "nascetur ridiculus mus. Odio tristique pharetra",
-      "categoryId": 1,
-      "img": "/foodtwo.jpg",
+      "categoryId": 2,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxhcOiCexuOITccCCvoAV1vm6vZnNmBEl-7Q&usqp=CAU",
       "price": 15.99
     },
     {
       "id": "41F64B2A-F29E-C1F7-DD2A-2025A4B4D9D6",
       "title": "pellentesque massa",
       "description": "nascetur ridiculus mus. Odio tristique pharetra",
-      "categoryId": 1,
-      "img": "/foodthree.jpg",
+      "categoryId": 5,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVc-tIVO-yrCcH5MHaWKv0BgwH3q7HQRm2Yg&usqp=CAU",
       "price": 20.59
     },
     {
       "id": "26575A26-B2FA-23B6-2E21-78C048B1B26C",
       "title": "viverra. Donec",
       "description": "diam at pretium aliquet, metus urna convallis",
-      "categoryId": 2,
-      "img": "/cattoyone.jpg",
+      "categoryId": 3,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpTrA9gspC3WPwPY2d1b055txLZDWXktFyhQ&usqp=CAU",
       "price": 40.99
     },
     {
@@ -69,7 +69,7 @@
       "title": "mus. Donec",
       "description": "nascetur ridiculus mus. Odio tristique pharetra",
       "categoryId": 2,
-      "img": "/cattoytwo.jpg",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRA-SzvkUBRC6D2OqIOR87v454fbLML52DUQ&usqp=CAU",
       "price": 17.45
     },
     {
@@ -77,18 +77,30 @@
       "title": "vitae, orci.",
       "description": "nascetur ridiculus mus. Odio tristique pharetra.",
       "categoryId": 2,
-      "img": "/cattoythree.jpg",
-      "price": 20.19
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqmnQ_-V9NerUVyTkYWK7VV9JHsX-XYAO2mg&usqp=CAU",
+      "price": 20
     }
   ],
   "categories": [
     {
       "id": 1,
-      "title": "food"
+      "title": "watches"
     },
     {
       "id": 2,
-      "title": "toys"
+      "title": "sunglasses"
+    },
+    {
+      "id": 3,
+      "title": "earrings"
+    },
+    {
+      "id": 4,
+      "title": "shoes"
+    },
+    {
+      "id": 5,
+      "title": "bags"
     }
   ]
 }

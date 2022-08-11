@@ -9,19 +9,24 @@ import {
 } from '@mui/material';
 import ProductsService from 'services/products-service';
 
-const ProductForm = ({ onSubmit }) => {
+const ProductForm = ({
+  onSubmit,
+  formTitle,
+  submitText,
+  initValues,
+}) => {
   const [categories, setCategories] = React.useState([]);
-  const [name, setName] = React.useState('');
-  const [category, setCategory] = React.useState('');
-  const [price, setPrice] = React.useState('');
-  const [img, setImg] = React.useState('');
-  const [description, setDescription] = React.useState('');
+  const [title, setTitle] = React.useState(initValues?.title ?? '');
+  const [category, setCategory] = React.useState(initValues?.categoryId ?? '');
+  const [price, setPrice] = React.useState(initValues?.price ?? '');
+  const [img, setImg] = React.useState(initValues?.img ?? '');
+  const [description, setDescription] = React.useState(initValues?.description ?? '');
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     onSubmit({
-      name,
+      title,
       categoryId: category,
       price: Number(price),
       img,
@@ -48,14 +53,14 @@ const ProductForm = ({ onSubmit }) => {
       }}
       onSubmit={handleSubmit}
     >
-      <Typography variant="h4" sx={{ textAlign: 'center', pb: 2 }}>Naujo produkto sukūrimas</Typography>
+      <Typography variant="h4" sx={{ textAlign: 'center', pb: 2 }}>{formTitle}</Typography>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         <TextField
           label="Pavadinimas"
           fullWidth
           variant="filled"
-          value={name}
-          onChange={(event) => setName(event.target.value)}
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
         />
         <TextField
           label="Kategorija"
@@ -65,8 +70,8 @@ const ProductForm = ({ onSubmit }) => {
           value={category}
           onChange={(event) => setCategory(event.target.value)}
         >
-          {categories.map(({ id, title }) => (
-            <MenuItem key={id} value={id}>{title}</MenuItem>
+          {categories.map(({ id, title: categoryTitle }) => (
+            <MenuItem key={id} value={id}>{categoryTitle}</MenuItem>
           ))}
         </TextField>
         <TextField
@@ -100,7 +105,7 @@ const ProductForm = ({ onSubmit }) => {
             color="success"
             size="large"
           >
-            Sukurti
+            {submitText}
 
           </Button>
         </Box>

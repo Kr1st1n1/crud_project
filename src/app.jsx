@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {
-  Box, Grid, Modal, Container,
+  Box, Grid, Modal, Container, Typography,
 } from '@mui/material';
 import ProductsService from 'services/products-service';
 import { ProductCard, Header, ProductForm } from './components';
@@ -8,6 +8,12 @@ import { ProductCard, Header, ProductForm } from './components';
 const App = () => {
   const [products, setProducts] = React.useState([]);
   const [modalOpen, setModalOpen] = React.useState(false);
+  const [productBeingEdited, setProductBeingEdited] = React.useState(null);
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setProductBeingEdited(null);
+  };
 
   const FetchAllProducts = async () => {
     const fetchedProducts = await ProductsService.fetchAll();
@@ -17,7 +23,19 @@ const App = () => {
   const createProduct = async (productProps) => {
     await ProductsService.create(productProps);
     await FetchAllProducts();
-    setModalOpen(false);
+    closeModal();
+  };
+
+  const editProduct = (id) => {
+    const foundProduct = products.find((c) => c.id === id);
+    setProductBeingEdited(foundProduct);
+    setModalOpen(true);
+  };
+
+  const updateProduct = async (productProps) => {
+    await ProductsService.update(productBeingEdited.id, productProps);
+    await FetchAllProducts();
+    closeModal();
   };
 
   const removeProduct = async (id) => {
@@ -34,16 +52,32 @@ const App = () => {
       gap: { xs: 4, xxl: 0 },
       pt: 2,
       px: 2,
+      bgcolor: '#2f4f4e',
     }}
     >
-      <Container>
+      <Container sx={{
+        bgcolor: '#f0f2f5',
+      }}
+      >
         <Header openModal={() => setModalOpen(true)} />
         <Modal
+          sx={{ bgcolor: '#2f4f4e' }}
           open={modalOpen}
-          onClose={() => setModalOpen(false)}
+          onClose={closeModal}
         >
-          <ProductForm onSubmit={createProduct} />
+          <ProductForm
+            onSubmit={productBeingEdited ? updateProduct : createProduct}
+            formTitle={productBeingEdited ? 'Redaguojamas produktas' : 'Naujo produkto sukūrimas'}
+            submitText={productBeingEdited ? 'Atnaujinti' : 'Sukurti'}
+            initValues={productBeingEdited}
+          />
         </Modal>
+        <Typography sx={{ fontSize: 34, fontWeight: 800, textAlign: 'center' }}>
+          FRONT-END
+        </Typography>
+        <Typography sx={{ fontSize: 34, fontWeight: 800, textAlign: 'center' }}>
+          CRUD APPLICATIONS
+        </Typography>
 
         <Grid container spacing={2}>
           {products.map(({
@@ -62,6 +96,7 @@ const App = () => {
                 category={category}
                 price={price}
                 onDelete={() => removeProduct(id)}
+                onEdit={() => editProduct(id)}
               />
             </Grid>
           ))}
