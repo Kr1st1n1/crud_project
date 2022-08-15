@@ -50,20 +50,25 @@ const ProductForm = ({
         left: '50%',
         transform: 'translate(-50%, -50%)',
         p: 3,
+        minWidth: 370,
       }}
       onSubmit={handleSubmit}
     >
-      <Typography variant="h4" sx={{ textAlign: 'center', pb: 2 }}>{formTitle}</Typography>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+      <Typography variant="h6" sx={{ textAlign: 'center', pb: 2 }}>{formTitle}</Typography>
+      <Box
+        sx={{
+          display: 'flex', flexDirection: 'column', gap: 2,
+        }}
+      >
         <TextField
-          label="Pavadinimas"
+          label="Title"
           fullWidth
           variant="filled"
           value={title}
           onChange={(event) => setTitle(event.target.value)}
         />
         <TextField
-          label="Kategorija"
+          label="Category"
           fullWidth
           select
           variant="filled"
@@ -75,7 +80,7 @@ const ProductForm = ({
           ))}
         </TextField>
         <TextField
-          label="Kaina €"
+          label="Price €"
           type="number"
           fullWidth
           variant="filled"
@@ -83,14 +88,14 @@ const ProductForm = ({
           onChange={(event) => setPrice(event.target.value)}
         />
         <TextField
-          label="Nuotraukos kelias"
+          label="Image path"
           fullWidth
           variant="filled"
           value={img}
           onChange={(event) => setImg(event.target.value)}
         />
         <TextField
-          label="Aprašymas"
+          label="Description"
           fullWidth
           variant="filled"
           multiline
@@ -101,9 +106,9 @@ const ProductForm = ({
         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
           <Button
             type="submit"
-            variant="contained"
-            color="success"
+            color="primary"
             size="large"
+            sx={{ fontWeight: 700 }}
           >
             {submitText}
 

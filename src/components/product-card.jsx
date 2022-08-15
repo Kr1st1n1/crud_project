@@ -33,7 +33,7 @@ const ProductCard = ({
       <Chip
         label={`# ${category}`}
         sx={{
-          backgroundColor: '#f0e78c',
+          backgroundColor: 'secondary.main',
           fontSize: 10,
           mt: 2,
           mb: 2,
@@ -43,7 +43,7 @@ const ProductCard = ({
       <Chip
         label="#style"
         sx={{
-          backgroundColor: '#f0e78c',
+          backgroundColor: 'secondary.main',
           fontSize: 10,
           mt: 2,
           mb: 2,
@@ -53,7 +53,7 @@ const ProductCard = ({
       <Chip
         label="#fashion"
         sx={{
-          backgroundColor: '#f0e78c',
+          backgroundColor: 'secondary.main',
           fontSize: 10,
           mt: 2,
           mb: 2,
@@ -71,12 +71,13 @@ const ProductCard = ({
       }}
       >
         <Typography
-          variant="h5"
+          variant="h6"
+          fontWeight={600}
           component="div"
         >
           {title}
         </Typography>
-        <Typography variant="h5" component="div" color="black">{`${price} €`}</Typography>
+        <Typography variant="h6" component="div" color="black">{`${price} €`}</Typography>
       </Box>
       <TypographyLimited variant="body2" color="text.secondary">{description}</TypographyLimited>
     </CardContent>
@@ -87,7 +88,7 @@ const ProductCard = ({
           fontWeight: 900,
           fontSize: 34,
           '&:hover': {
-            bgcolor: 'warning.light',
+            bgcolor: 'warning.main',
           },
         }}
         size="small"
@@ -103,7 +104,7 @@ const ProductCard = ({
           color: '#2f4f4e',
           fontWeight: 900,
           '&:hover': {
-            bgcolor: 'primary.light',
+            bgcolor: 'info.light',
           },
         }}
         size="small"

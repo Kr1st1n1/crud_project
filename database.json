@@ -2,35 +2,36 @@
   "products": [
     {
       "id": "A3ADE977-67F9-7D43-DC1E-DA5F81202699",
-      "title": "ornare placerat,",
+      "title": "ornare placerat",
       "description": "nascetur ridiculus mus. Odio tristique pharetra",
       "categoryId": 2,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT-UluJXxod98WgR6filICQjf3OKhrW7RKpsWyDBg8JZIZADd7jUHcqHMMxPQnTVga6XU&usqp=CAU",
-      "price": 70.59
+      "price": 70.99,
+      "category": 2
     },
     {
       "id": "593CAD15-581D-514A-3956-565A5671272B",
-      "title": "non quam.",
+      "title": "non quam",
       "description": "vitae, sodales at, velit. Pellentesque ultricies",
-      "categoryId": 2,
+      "categoryId": 5,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSSYxdYiuy-Vam8htV2LCsvlPD4YtE7ZTAyA&usqp=CAU",
-      "price": 20.55
+      "price": 150.99
     },
     {
       "id": "DCE10D7D-3987-EE3E-6E17-75FC38D23ECA",
-      "title": "adipiscing elit.",
+      "title": "adipiscing elit",
       "description": "vel est tempor bibendum. Donec felis orci, adipiscing non, luctus",
       "categoryId": 3,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTiqnHyGl5U7GmOZpnxIxCx0T92BTGCfuWtg&usqp=CAU",
-      "price": 20.063
+      "price": 99.99
     },
     {
       "id": "438A43D5-A392-8B54-32BA-458A46292172",
-      "title": "Duis gravida.",
+      "title": "Duis gravid",
       "description": "eget magna. Suspendisse tristique neque",
       "categoryId": 5,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhux24QSaZj-YsE38OFjVvHDIRPb0lSCnB3g&usqp=CAU",
-      "price": 18.99
+      "price": 120.99
     },
     {
       "id": "22574763-4E41-506D-7382-1713E578436A",
@@ -38,7 +39,7 @@
       "description": "sem ut dolor dapibus gravida. Aliquam",
       "categoryId": 1,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtjQIhMMVKlX9CuZ78u1qE2VzfDPiBXxe1Cw&usqp=CAU",
-      "price": 22.22
+      "price": 220.99
     },
     {
       "id": "13A3DD4D-460D-C87C-A4F4-56B21C35E815",
@@ -50,11 +51,11 @@
     },
     {
       "id": "41F64B2A-F29E-C1F7-DD2A-2025A4B4D9D6",
-      "title": "pellentesque massa",
+      "title": "pellentesque",
       "description": "nascetur ridiculus mus. Odio tristique pharetra",
       "categoryId": 5,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVc-tIVO-yrCcH5MHaWKv0BgwH3q7HQRm2Yg&usqp=CAU",
-      "price": 20.59
+      "price": 199.99
     },
     {
       "id": "26575A26-B2FA-23B6-2E21-78C048B1B26C",
@@ -62,7 +63,7 @@
       "description": "diam at pretium aliquet, metus urna convallis",
       "categoryId": 3,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpTrA9gspC3WPwPY2d1b055txLZDWXktFyhQ&usqp=CAU",
-      "price": 40.99
+      "price": 250.99
     },
     {
       "id": "B9E7DC9C-3155-E39B-8AD6-8B063609937E",
@@ -70,15 +71,15 @@
       "description": "nascetur ridiculus mus. Odio tristique pharetra",
       "categoryId": 2,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRA-SzvkUBRC6D2OqIOR87v454fbLML52DUQ&usqp=CAU",
-      "price": 17.45
+      "price": 59.99
     },
     {
       "id": "A006711C-6238-1D0E-172B-B0FE52074A7C",
-      "title": "vitae, orci.",
+      "title": "vitae, orci",
       "description": "nascetur ridiculus mus. Odio tristique pharetra.",
       "categoryId": 2,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqmnQ_-V9NerUVyTkYWK7VV9JHsX-XYAO2mg&usqp=CAU",
-      "price": 20
+      "price": 200
     }
   ],
   "categories": [

@@ -52,31 +52,31 @@ const App = () => {
       gap: { xs: 4, xxl: 0 },
       pt: 2,
       px: 2,
-      bgcolor: '#2f4f4e',
+      bgcolor: 'primary.main',
     }}
     >
       <Container sx={{
-        bgcolor: '#f0f2f5',
+        bgcolor: 'success.main',
       }}
       >
         <Header openModal={() => setModalOpen(true)} />
         <Modal
-          sx={{ bgcolor: '#2f4f4e' }}
+          sx={{ bgcolor: 'primary.main' }}
           open={modalOpen}
           onClose={closeModal}
         >
           <ProductForm
             onSubmit={productBeingEdited ? updateProduct : createProduct}
-            formTitle={productBeingEdited ? 'Redaguojamas produktas' : 'Naujo produkto sukūrimas'}
-            submitText={productBeingEdited ? 'Atnaujinti' : 'Sukurti'}
+            formTitle={productBeingEdited ? 'Edit product' : 'Create new product'}
+            submitText={productBeingEdited ? 'Update' : 'Create'}
             initValues={productBeingEdited}
           />
         </Modal>
-        <Typography sx={{ fontSize: 34, fontWeight: 800, textAlign: 'center' }}>
-          FRONT-END
-        </Typography>
-        <Typography sx={{ fontSize: 34, fontWeight: 800, textAlign: 'center' }}>
-          CRUD APPLICATIONS
+        <Typography sx={{
+          fontSize: 34, fontWeight: 800, textAlign: 'center', p: 4,
+        }}
+        >
+          CRUD Application
         </Typography>
 
         <Grid container spacing={2}>
